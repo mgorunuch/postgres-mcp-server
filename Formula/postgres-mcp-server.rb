@@ -45,6 +45,6 @@ class PostgresMcpServer < Formula
   end
 
   test do
-    system "#{bin}/postgres-mcp-server --version"
+    system "#{bin}/postgres-mcp-server", "--version"
   end
 end
