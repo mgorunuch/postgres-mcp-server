@@ -51,10 +51,10 @@ brews:
   - name: postgresql-mcp-server
     homepage: "https://github.com/mgorunuch/postgresql-mcp-server"
     description: "Model Control Protocol (MCP) server for PostgreSQL databases"
-    tap:
+    repository:
       owner: mgorunuch
       name: homebrew-postgresql-mcp-server
     folder: Formula
     license: "MIT"
-    test:
-      system_exec: "#{bin}/postgresql-mcp-server --version"
+    test: |
+      system "#{bin}/postgresql-mcp-server --version"
