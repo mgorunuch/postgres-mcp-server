@@ -52,6 +52,8 @@ func main() {
 		config := MCPConfig{
 			Type:    "stdio",
 			Command: getExecutablePath(),
+			Args:    []string{},          // Initialize with empty slice - Claude Code requires empty array not null
+			Env:     map[string]string{}, // Initialize with empty map - Claude Code requires empty object not null
 		}
 
 		// Add connection string as argument if provided
