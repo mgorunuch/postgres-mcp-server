@@ -1,0 +1,34 @@
+class PostgresqlMcpServer < Formula
+  desc "Model Control Protocol (MCP) server for PostgreSQL databases"
+  homepage "https://github.com/mgorunuch/postgresql-mcp-server"
+  version "{{ .Version }}"
+  license "MIT"
+
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/mgorunuch/postgresql-mcp-server/releases/download/{{ .Tag }}/postgresql-mcp-server_Darwin_arm64.tar.gz"
+      sha256 "{{ .Arm64SHA }}"
+    else
+      url "https://github.com/mgorunuch/postgresql-mcp-server/releases/download/{{ .Tag }}/postgresql-mcp-server_Darwin_x86_64.tar.gz"
+      sha256 "{{ .AMD64SHA }}"
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/mgorunuch/postgresql-mcp-server/releases/download/{{ .Tag }}/postgresql-mcp-server_Linux_arm64.tar.gz"
+      sha256 "{{ .LinuxARM64SHA }}"
+    else
+      url "https://github.com/mgorunuch/postgresql-mcp-server/releases/download/{{ .Tag }}/postgresql-mcp-server_Linux_x86_64.tar.gz"
+      sha256 "{{ .LinuxAMD64SHA }}"
+    end
+  end
+
+  def install
+    bin.install "postgresql-mcp-server"
+  end
+
+  test do
+    system "#{bin}/postgresql-mcp-server", "--version"
+  end
+end
