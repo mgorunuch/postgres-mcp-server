@@ -18,7 +18,7 @@ JSON=$(postgresql-mcp-server --json --connection-string '...') \
 
 ```bash
 # Add the tap
-brew tap mgorunuch/postgresql-mcp-server
+brew tap mgorunuch/postgresql-mcp-server https://github.com/mgorunuch/postgres-mcp-server
 
 # Install the server
 brew install postgresql-mcp-server
