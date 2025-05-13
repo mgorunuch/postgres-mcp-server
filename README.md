@@ -1,5 +1,7 @@
 # PostgreSQL MCP Server
 
+![PostgreSQL MCP Server Banner](banner.png)
+
 A Model Control Protocol (MCP) server for PostgreSQL databases that allows Claude to interact with your PostgreSQL databases.
 
 ## Using with Claude Code
