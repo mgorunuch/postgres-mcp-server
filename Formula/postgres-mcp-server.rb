@@ -5,21 +5,21 @@
 class PostgresMcpServer < Formula
   desc "Model Control Protocol (MCP) server for PostgreSQL databases"
   homepage "https://github.com/mgorunuch/postgres-mcp-server"
-  version "0.1.10"
+  version "0.1.11"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mgorunuch/postgres-mcp-server/releases/download/v0.1.10/postgres-mcp-server_Darwin_x86_64.tar.gz"
-      sha256 "601783db48c20f6c814f6e4bf95a1189f127dd2f66988fa58a7473b096ea0956"
+      url "https://github.com/mgorunuch/postgres-mcp-server/releases/download/v0.1.11/postgres-mcp-server_Darwin_x86_64.tar.gz"
+      sha256 "b3c135ab762a59260515c2ac4684736d2a5712ee13de3152fe98f31afae45c6a"
 
       def install
         bin.install "postgres-mcp-server"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mgorunuch/postgres-mcp-server/releases/download/v0.1.10/postgres-mcp-server_Darwin_arm64.tar.gz"
-      sha256 "77732d87c62406c6090cae65fe827804288599a86ee4de97bfba995d3d9b8f73"
+      url "https://github.com/mgorunuch/postgres-mcp-server/releases/download/v0.1.11/postgres-mcp-server_Darwin_arm64.tar.gz"
+      sha256 "ac80c96b0ac13a90f22ef80d1be2ab0c3e2f3c1237e02da981c96cbf010d9f93"
 
       def install
         bin.install "postgres-mcp-server"
@@ -29,15 +29,15 @@ class PostgresMcpServer < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/mgorunuch/postgres-mcp-server/releases/download/v0.1.10/postgres-mcp-server_Linux_x86_64.tar.gz"
-      sha256 "a06ec9827e45488e49fee1227e5722f2b32b694f2c6295f0b8a71521addf7ad4"
+      url "https://github.com/mgorunuch/postgres-mcp-server/releases/download/v0.1.11/postgres-mcp-server_Linux_x86_64.tar.gz"
+      sha256 "7a21aa8081cdfe6f94aa59ef42e4a6052d8a2d0ea23ff99382bef5b141e16b05"
       def install
         bin.install "postgres-mcp-server"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/mgorunuch/postgres-mcp-server/releases/download/v0.1.10/postgres-mcp-server_Linux_arm64.tar.gz"
-      sha256 "1a5ad3096360c6a3abe992867f0bef2142bc1a528cc5a9a09978b6b2ac65daaa"
+      url "https://github.com/mgorunuch/postgres-mcp-server/releases/download/v0.1.11/postgres-mcp-server_Linux_arm64.tar.gz"
+      sha256 "ca0ea3a0a016121b0bad3d7e1f82945f95e86ddfc4e809f8cc05b9c60f294fd1"
       def install
         bin.install "postgres-mcp-server"
       end
