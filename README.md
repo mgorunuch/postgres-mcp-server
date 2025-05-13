@@ -2,6 +2,16 @@
 
 A Model Control Protocol (MCP) server for PostgreSQL databases that allows Claude to interact with your PostgreSQL databases.
 
+## Using with Claude Code
+
+The easiest way to use this server with Claude Code:
+
+```bash
+# Generate MCP config and add it to Claude
+JSON=$(postgresql-mcp-server --json --connection-string '...') \
+&& claude mcp add-json "$JSON"
+```
+
 ## Installation
 
 ### Using Homebrew
@@ -54,6 +64,7 @@ There are two ways to use this server:
 
 ## Command Line Options
 
+- `--version`: Displays version information
 - `--json`: Outputs MCP configuration JSON for use with Claude
 - `--connection-string`: PostgreSQL connection string (overrides environment variable)
 
