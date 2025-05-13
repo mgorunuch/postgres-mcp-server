@@ -1,4 +1,4 @@
-module github.com/mgorunuch/postgresql-mcp-server
+module github.com/mgorunuch/postgres-mcp-server
 
 go 1.23
 

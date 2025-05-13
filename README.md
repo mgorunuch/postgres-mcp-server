@@ -8,7 +8,7 @@ The easiest way to use this server with Claude Code:
 
 ```bash
 # Generate MCP config and add it to Claude
-JSON=$(postgresql-mcp-server --json --connection-string '...') \
+JSON=$(postgres-mcp-server --json --connection-string '...') \
 && claude mcp add-json "$JSON"
 ```
 
@@ -18,10 +18,10 @@ JSON=$(postgresql-mcp-server --json --connection-string '...') \
 
 ```bash
 # Add the tap
-brew tap mgorunuch/postgresql-mcp-server https://github.com/mgorunuch/postgres-mcp-server
+brew tap mgorunuch/postgres-mcp-server https://github.com/mgorunuch/postgres-mcp-server
 
 # Install the server
-brew install postgresql-mcp-server
+brew install mgorunuch/postgres-mcp-server/postgres-mcp-server
 ```
 
 ### Manual Installation
@@ -42,7 +42,7 @@ There are two ways to use this server:
 
 2. Launch the server:
    ```
-   postgresql-mcp-server
+   postgres-mcp-server
    ```
 
 3. Use with Claude by setting up the MCP connection to this server.
@@ -51,13 +51,13 @@ There are two ways to use this server:
 
 1. Generate the MCP configuration JSON:
    ```
-   postgresql-mcp-server --json --connection-string "postgresql://user:password@host:port/dbname?sslmode=disable"
+   postgres-mcp-server --json --connection-string "postgresql://user:password@host:port/dbname?sslmode=disable"
    ```
    This will output a JSON configuration you can use with Claude's MCP tools.
 
    Example output:
    ```json
-   {"type":"stdio","command":"/path/to/postgresql-mcp-server","args":["--connection-string","postgresql://user:password@host:port/dbname?sslmode=disable"],"env":{}}
+   {"type":"stdio","command":"/path/to/postgres-mcp-server","args":["--connection-string","postgresql://user:password@host:port/dbname?sslmode=disable"],"env":{}}
    ```
 
 2. Copy this JSON output and use it to configure the MCP connection in Claude.
