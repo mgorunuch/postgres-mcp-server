@@ -49,11 +49,11 @@ changelog:
 
 brews:
   - name: postgresql-mcp-server
-    homepage: "https://github.com/mgorunuch/postgresql-mcp-server"
+    homepage: "https://github.com/mgorunuch/postgres-mcp-server"
     description: "Model Control Protocol (MCP) server for PostgreSQL databases"
     repository:
       owner: mgorunuch
-      name: postgresql-mcp-server
+      name: postgres-mcp-server
       branch: main
     directory: Formula
     license: "MIT"
