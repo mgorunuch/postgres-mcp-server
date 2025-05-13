@@ -54,7 +54,7 @@ brews:
     repository:
       owner: mgorunuch
       name: homebrew-postgresql-mcp-server
-    folder: Formula
+    directory: Formula
     license: "MIT"
     test: |
       system "#{bin}/postgresql-mcp-server --version"
