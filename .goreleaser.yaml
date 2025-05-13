@@ -5,13 +5,6 @@ before:
   hooks:
     - go mod tidy
 
-release:
-  # Repo in which the release will be created.
-  # Default: extracted from the origin remote URL or empty if its private hosted.
-  github:
-    owner: mgorunuch
-    name: postgresql-mcp-server
-
 builds:
   - env:
       - CGO_ENABLED=0
@@ -60,7 +53,8 @@ brews:
     description: "Model Control Protocol (MCP) server for PostgreSQL databases"
     repository:
       owner: mgorunuch
-      name: homebrew-postgresql-mcp-server
+      name: postgresql-mcp-server
+      branch: main
     directory: Formula
     license: "MIT"
     test: |
