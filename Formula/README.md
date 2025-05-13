@@ -6,10 +6,10 @@ This directory contains the Homebrew formula for the PostgreSQL MCP Server.
 
 ```bash
 # Add the tap
-brew tap mgorunuch/postgresql-mcp-server https://github.com/mgorunuch/postgres-mcp-server
+brew tap mgorunuch/postgres-mcp-server https://github.com/mgorunuch/postgres-mcp-server
 
 # Install the server
-brew install postgresql-mcp-server
+brew install postgres-mcp-server
 ```
 
 ## Updating

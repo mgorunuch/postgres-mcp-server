@@ -1,0 +1,1 @@
+- Do not use Co-Authored-By in commit messages

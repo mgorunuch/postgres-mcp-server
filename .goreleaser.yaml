@@ -1,5 +1,5 @@
 version: 2
-project_name: postgresql-mcp-server
+project_name: postgres-mcp-server
 
 before:
   hooks:
@@ -48,7 +48,7 @@ changelog:
       - '^ci:'
 
 brews:
-  - name: postgresql-mcp-server
+  - name: postgres-mcp-server
     homepage: "https://github.com/mgorunuch/postgres-mcp-server"
     description: "Model Control Protocol (MCP) server for PostgreSQL databases"
     repository:
@@ -58,4 +58,4 @@ brews:
     directory: Formula
     license: "MIT"
     test: |
-      system "#{bin}/postgresql-mcp-server --version"
+      system "#{bin}/postgres-mcp-server --version"
